@@ -1,4 +1,4 @@
-@import '_normalize.scss'; // <-- including a file to reset the style
+@import '_zero_style.scss'; // <-- including a file to reset the style
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face {
@@ -15,3 +15,136 @@
 /*======================================================================
 =====================OUR MAIN STYLE=====================================
 ======================================================================*/
+body {
+    min-width            : 1450px;
+    background-image     : url(../image/background.jpg);
+    background-size      : cover;
+    background-position  : center center;
+    background-attachment: fixed;
+    background-repeat    : no-repeat;
+    position             : relative;
+    top                  : 0;
+    z-index              : -2;
+
+    &:after {
+        content         : '';
+        position        : fixed;
+        top             : 0;
+        bottom          : 0;
+        left            : 0;
+        right           : 0;
+        background-color: rgba(42, 77, 135, .8);
+        z-index         : -1;
+    }
+
+
+}
+
+main {
+    max-width: 1680px;
+    margin   : 0 auto;
+    padding  : 136px 32px 0 32px;
+    position : relative;
+    top      : 0;
+
+
+    .title {
+        font-family: 'Roboto', sans-serif;
+        line-height: 77px;
+
+        .description {
+            font-size     : 70px;
+            font-weight   : bold;
+            text-transform: uppercase;
+            color         : #ffffff;
+
+
+            &:nth-of-type(2) {
+                color: #f0e353;
+                width: 895px;
+            }
+
+            .lower-case {
+                text-transform: lowercase;
+            }
+        }
+
+        p {
+            font-size  : 36px;
+            font-weight: 300;
+            color      : #ffffff;
+            line-height: 45px;
+        }
+
+        .the_place_of_webinar {
+            margin: 98px 0;
+
+            p {
+                display       : inline;
+                color         : #ffffff;
+                font-size     : 52px;
+                font-weight   : 500;
+                margin-left   : 3px;
+                border-left   : 7px solid #f0e353;
+                padding       : 0 0 0 16px;
+                vertical-align: -9px;
+                line-height   : 30px;
+
+                .number {
+                    font-size  : 60px;
+                    font-weight: bolder;
+                }
+
+                .small {
+                    font-size  : 30px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .places-left {
+        position     : absolute;
+        right        : 20px;
+        top          : 149px;
+        font-family  : 'Roboto', sans-serif;
+        color        : #ffffff;
+        border       : 2px solid #ffffff;
+        border-radius: 2px;
+        width        : 365px;
+        height       : 425px;
+        text-align   : center;
+
+        .counter {
+
+            border-bottom: 1px solid #ffffff;
+            height       : 137px;
+            position     : absolute;
+            width        : 361px;
+
+            P {
+                font-size  : 180px;
+                font-weight: 100;
+                position   : absolute;
+                top        : 4px;
+                right      : 82px;
+            }
+
+        }
+
+        .counter-description {
+            width: 250px;
+
+            position: absolute;
+            top     : 298px;
+            right   : 56px;
+
+            p {
+                font-size  : 38px;
+                line-height: 38px;
+                font-weight: 300;
+                text-align : center;
+            }
+        }
+    }
+}
