@@ -25,6 +25,7 @@ body {
     position             : relative;
     top                  : 0;
     z-index              : -2;
+    transition           : all 1s;
 
     &:after {
         content         : '';
@@ -133,8 +134,7 @@ main {
         }
 
         .counter-description {
-            width: 250px;
-
+            width   : 250px;
             position: absolute;
             top     : 298px;
             right   : 56px;
@@ -146,5 +146,170 @@ main {
                 text-align : center;
             }
         }
+    }
+
+    .registration {
+        padding-top: 1px;
+        font-family: 'Roboto';
+
+        button {
+            display         : block;
+            width           : 791px;
+            height          : 96px;
+            border          : 2px solid #f0e353;
+            border-radius   : 3px;
+            background-color: transparent;
+            margin          : 40px auto 0;
+            font-size       : 50px;
+            text-transform  : uppercase;
+            color           : #f0e353;
+            font-weight     : 500;
+            text-align      : center;
+
+            &:hover {
+                cursor   : pointer;
+                transform: scale(1.1);
+
+
+            }
+        }
+
+        .registration--description {
+            text-align : center;
+            font-size  : 22px;
+            color      : #ffffff;
+            margin-top : 30px;
+            font-weight: 100;
+        }
+
+        .arrow {
+            width        : 64px;
+            height       : 64px;
+            border-left  : 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            transform    : rotate(-45deg);
+            margin       : -7px auto 0;
+        }
+
+        form {
+            display   : none;
+            margin-top: 50px;
+
+            input {
+                display         : block;
+                margin          : 10px auto;
+                width           : 400px;
+                height          : 50px;
+                border          : 2px solid grey;
+                border-radius   : 3px;
+                background-color: transparent;
+                font-family     : 'Roboto';
+                font-size       : 20px;
+                color           : #ffffff;
+                font-weight     : 300;
+
+                &:focus {
+                    outline       : 0;
+                    outline-offset: 0;
+                }
+            }
+
+            input[type="text"] {
+                text-align: center;
+
+
+                &::placeholder {
+                    text-align    : center;
+                    text-transform: uppercase;
+                    color         : #ffffff;
+                }
+            }
+
+            input[type="button"] {
+                text-transform  : uppercase;
+                border          : 2px solid #f0e353;
+                color           : #f0e353;
+                background-color: rgba(77, 77, 77, .2);
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.teem {
+    display        : flex;
+    justify-content: center;
+    flex-direction : row;
+    margin-top     : 30px;
+    text-transform : uppercase;
+    height         : 375px;
+
+    &>div {
+        display        : flex;
+        justify-content: center;
+        flex-direction : row;
+        align-items    : center;
+
+        & p {
+            font-family: 'Roboto';
+            font-size  : 35px;
+            color      : #ffffff;
+        }
+    }
+
+    .teem--organizers {
+        width             : 50%;
+        border-top        : 1px solid #ffffff;
+        //height          : 200px;
+        background-color  : #55719f;
+
+        .teem--logo {
+            width       : 315px;
+            height      : 81px;
+            margin-right: 49px;
+        }
+
+        p {
+            width: 269px;
+        }
+    }
+
+
+
+    .teem--hosts {
+        width              : 50%;
+        border-top         : 1px solid #ffffff;
+        border-left        : 1px solid #ffffff;
+        // height          : 200px;
+        background-color   : #55719f;
+
+
+        .teem--logo {
+            width       : 138px;
+            height      : 138px;
+            margin-right: 49px;
+        }
+
+        div {
+            p {
+                width        : 452px;
+                display      : block;
+                border-bottom: 3px solid #ffffff;
+            }
+
+            .small-caps {
+                text-transform: none;
+                font-size     : 22px;
+                font-weight   : 100;
+                border        : none;
+            }
+        }
+
+
+
+
     }
 }

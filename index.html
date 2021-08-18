@@ -32,24 +32,35 @@
             </div>
 
         </div>
-        <!-- <div class="registration">
-                <button>Зарегистрироваться</button>
-                <p class="registration--description">Запись предоставляется бесплатно только зарегестрированным участникам
-                </p>
-                <div class="arrow"></div>
-                <form action="#">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="button" value="">
-                </form>
-            </div> -->
+        <div class="registration">
+            <button onmousedown="viewForm()">Зарегистрироваться</button>
+            <p class="registration--description">Запись предоставляется бесплатно только зарегестрированным участникам
+            </p>
+            <div class="arrow" id="main-arrow"></div>
+            <form action="#" id="main-form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="text" placeholder="Возраст">
+                <input type="button" value="Зарегистрировать">
+            </form>
+        </div>
     </main>
 
     <footer class="teem">
-        <div class="teem--organizers"></div>
-        <div class="teem--hosts"></div>
+        <div class="teem--organizers">
+            <img src="image/idcp_logo.png" alt="our partners" class="teem--logo">
+            <p>Организаторы вебинара</p>
+        </div>
+        <div class="teem--hosts">
+            <img src="image/z_logo.png" alt="our partners" class="teem--logo">
+            <div>
+                <p>Ведущий вебинара</p>
+                <p class="small-caps">Председатель крупнейшего русскоязычного
+                    общества Германии “Neue Zeiten e.V.”</p>
+            </div>
+        </div>
     </footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

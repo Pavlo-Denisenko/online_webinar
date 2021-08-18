@@ -89,7 +89,9 @@ body {
   background-repeat: no-repeat;
   position: relative;
   top: 0;
-  z-index: -2; }
+  z-index: -2;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
   body:after {
     content: '';
     position: fixed;
@@ -174,5 +176,144 @@ main {
         line-height: 38px;
         font-weight: 300;
         text-align: center; }
+  main .registration {
+    padding-top: 1px;
+    font-family: 'Roboto'; }
+    main .registration button {
+      display: block;
+      width: 791px;
+      height: 96px;
+      border: 2px solid #f0e353;
+      border-radius: 3px;
+      background-color: transparent;
+      margin: 40px auto 0;
+      font-size: 50px;
+      text-transform: uppercase;
+      color: #f0e353;
+      font-weight: 500;
+      text-align: center; }
+      main .registration button:hover {
+        cursor: pointer;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
+    main .registration .registration--description {
+      text-align: center;
+      font-size: 22px;
+      color: #ffffff;
+      margin-top: 30px;
+      font-weight: 100; }
+    main .registration .arrow {
+      width: 64px;
+      height: 64px;
+      border-left: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      margin: -7px auto 0; }
+    main .registration form {
+      display: none;
+      margin-top: 50px; }
+      main .registration form input {
+        display: block;
+        margin: 10px auto;
+        width: 400px;
+        height: 50px;
+        border: 2px solid grey;
+        border-radius: 3px;
+        background-color: transparent;
+        font-family: 'Roboto';
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 300; }
+        main .registration form input:focus {
+          outline: 0;
+          outline-offset: 0; }
+      main .registration form input[type="text"] {
+        text-align: center; }
+        main .registration form input[type="text"]::-webkit-input-placeholder {
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff; }
+        main .registration form input[type="text"]:-ms-input-placeholder {
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff; }
+        main .registration form input[type="text"]::-ms-input-placeholder {
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff; }
+        main .registration form input[type="text"]::placeholder {
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff; }
+      main .registration form input[type="button"] {
+        text-transform: uppercase;
+        border: 2px solid #f0e353;
+        color: #f0e353;
+        background-color: rgba(77, 77, 77, 0.2); }
+        main .registration form input[type="button"]:hover {
+          -webkit-transform: scale(1.1);
+                  transform: scale(1.1); }
+
+.teem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 30px;
+  text-transform: uppercase;
+  height: 375px; }
+  .teem > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .teem > div p {
+      font-family: 'Roboto';
+      font-size: 35px;
+      color: #ffffff; }
+  .teem .teem--organizers {
+    width: 50%;
+    border-top: 1px solid #ffffff;
+    background-color: #55719f; }
+    .teem .teem--organizers .teem--logo {
+      width: 315px;
+      height: 81px;
+      margin-right: 49px; }
+    .teem .teem--organizers p {
+      width: 269px; }
+  .teem .teem--hosts {
+    width: 50%;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    background-color: #55719f; }
+    .teem .teem--hosts .teem--logo {
+      width: 138px;
+      height: 138px;
+      margin-right: 49px; }
+    .teem .teem--hosts div p {
+      width: 452px;
+      display: block;
+      border-bottom: 3px solid #ffffff; }
+    .teem .teem--hosts div .small-caps {
+      text-transform: none;
+      font-size: 22px;
+      font-weight: 100;
+      border: none; }
 
 /*# sourceMappingURL=main.css.map */
