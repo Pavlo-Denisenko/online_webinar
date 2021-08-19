@@ -1,22 +1,11 @@
 @import '_zero_style.scss'; // <-- including a file to reset the style
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@font-face {
-    font-family: 'Helvetica Neue Cyr Black';
-    src        : url('../fonts/HelveticaNeueCyr-Black.eot');
-    src        : url('../fonts/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/HelveticaNeueCyr-Black.woff') format('woff'),
-        url('../fonts/HelveticaNeueCyr-Black.ttf') format('truetype');
-    font-weight: normal;
-    font-style : normal;
-}
 
-// .box-name {font-family: 'Helvetica Neue Cyr Black';}
 /*======================================================================
 =====================OUR MAIN STYLE=====================================
 ======================================================================*/
 body {
-    min-width            : 1450px;
     background-image     : url(../image/background.jpg);
     background-size      : cover;
     background-position  : center center;
@@ -37,17 +26,15 @@ body {
         background-color: rgba(42, 77, 135, .8);
         z-index         : -1;
     }
-
-
 }
 
 main {
     max-width: 1680px;
+    min-width: 1450px;
     margin   : 0 auto;
     padding  : 136px 32px 0 32px;
     position : relative;
     top      : 0;
-
 
     .title {
         font-family: 'Roboto', sans-serif;
@@ -58,7 +45,6 @@ main {
             font-weight   : bold;
             text-transform: uppercase;
             color         : #ffffff;
-
 
             &:nth-of-type(2) {
                 color: #f0e353;
@@ -117,7 +103,6 @@ main {
         text-align   : center;
 
         .counter {
-
             border-bottom: 1px solid #ffffff;
             height       : 137px;
             position     : absolute;
@@ -169,8 +154,6 @@ main {
             &:hover {
                 cursor   : pointer;
                 transform: scale(1.1);
-
-
             }
         }
 
@@ -191,7 +174,7 @@ main {
             margin       : -7px auto 0;
         }
 
-        form {
+        #main-form {
             display   : none;
             margin-top: 50px;
 
@@ -216,7 +199,6 @@ main {
 
             input[type="text"] {
                 text-align: center;
-
 
                 &::placeholder {
                     text-align    : center;
@@ -261,10 +243,9 @@ main {
     }
 
     .teem--organizers {
-        width             : 50%;
-        border-top        : 1px solid #ffffff;
-        //height          : 200px;
-        background-color  : #55719f;
+        width           : 50%;
+        border-top      : 1px solid #ffffff;
+        background-color: #55719f;
 
         .teem--logo {
             width       : 315px;
@@ -277,15 +258,11 @@ main {
         }
     }
 
-
-
     .teem--hosts {
-        width              : 50%;
-        border-top         : 1px solid #ffffff;
-        border-left        : 1px solid #ffffff;
-        // height          : 200px;
-        background-color   : #55719f;
-
+        width           : 50%;
+        border-top      : 1px solid #ffffff;
+        border-left     : 1px solid #ffffff;
+        background-color: #55719f;
 
         .teem--logo {
             width       : 138px;
@@ -307,9 +284,129 @@ main {
                 border        : none;
             }
         }
+    }
+}
+
+@media screen and (max-width: 1470px) {
+
+    body {
+        min-width: 960px;
+    }
+
+    main {
+        max-width: 100%;
+        min-width: auto;
+        margin   : 0 auto;
+        padding  : 0;
+
+        .title {
+
+            .description {
+                margin    : 30px auto;
+                text-align: center;
+                width     : auto;
+
+                &:nth-of-type(2) {
+                    color: #f0e353;
+                    width: auto;
+                }
+            }
+
+            p {
+                width     : auto;
+                text-align: center;
+            }
+
+            .the_place_of_webinar {
+                margin: 98px 0 50px 0;
+
+                p {
+                    display     : block;
+                    width       : 936px;
+                    height      : 60px;
+                    margin      : 0 auto;
+                    border-left : 7px solid #f0e353;
+                    padding-left: 16px;
+                    line-height : 60px;
+                }
+            }
+        }
+
+        .places-left {
+            position : relative;
+            top      : 200px;
+            width    : 365px;
+            height   : 425px;
+            left     : 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .teem {
+        display        : flex;
+        justify-content: center;
+        flex-direction : column;
+        margin-top     : 30px;
+        text-transform : uppercase;
+        height         : auto;
+        width          : 100%;
+
+        &>div {
+            height       : 150px;
+            padding-left : 20px;
+            padding-right: 20px;
 
 
+            & p {
+                font-family: 'Roboto';
+                font-size  : 25px;
+                color      : #ffffff;
+            }
+        }
+
+        .teem--organizers {
+            width: 100%;
+
+            .teem--logo {
+                width       : 157.5px;
+                height      : 40.5px;
+                margin-right: 49px;
+            }
+
+            p {
+                width: auto;
+            }
+        }
+
+        .teem--hosts {
+            width      : 100%;
+            border-left: none;
+
+            .teem--logo {
+                width       : 69px;
+                height      : 69px;
+                margin-right: 39px;
+
+            }
+
+            div {
+                display        : flex;
+                justify-content: center;
+                flex-direction : column;
+                width          : 40%;
 
 
+                p {
+                    width  : auto;
+                    display: block;
+
+                    border-bottom: 3px solid #ffffff;
+                }
+
+                .small-caps {
+                    font-size: 17px;
+                }
+            }
+        }
     }
 }

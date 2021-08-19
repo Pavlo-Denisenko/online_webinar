@@ -71,17 +71,10 @@ select {
     -webkit-transition-duration: 0.01ms !important;
             transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
-@font-face {
-  font-family: 'Helvetica Neue Cyr Black';
-  src: url("../fonts/HelveticaNeueCyr-Black.eot");
-  src: url("../fonts/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
 /*======================================================================
 =====================OUR MAIN STYLE=====================================
 ======================================================================*/
 body {
-  min-width: 1450px;
   background-image: url(../image/background.jpg);
   background-size: cover;
   background-position: center center;
@@ -104,6 +97,7 @@ body {
 
 main {
   max-width: 1680px;
+  min-width: 1450px;
   margin: 0 auto;
   padding: 136px 32px 0 32px;
   position: relative;
@@ -210,10 +204,10 @@ main {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
       margin: -7px auto 0; }
-    main .registration form {
+    main .registration #main-form {
       display: none;
       margin-top: 50px; }
-      main .registration form input {
+      main .registration #main-form input {
         display: block;
         margin: 10px auto;
         width: 400px;
@@ -225,33 +219,33 @@ main {
         font-size: 20px;
         color: #ffffff;
         font-weight: 300; }
-        main .registration form input:focus {
+        main .registration #main-form input:focus {
           outline: 0;
           outline-offset: 0; }
-      main .registration form input[type="text"] {
+      main .registration #main-form input[type="text"] {
         text-align: center; }
-        main .registration form input[type="text"]::-webkit-input-placeholder {
+        main .registration #main-form input[type="text"]::-webkit-input-placeholder {
           text-align: center;
           text-transform: uppercase;
           color: #ffffff; }
-        main .registration form input[type="text"]:-ms-input-placeholder {
+        main .registration #main-form input[type="text"]:-ms-input-placeholder {
           text-align: center;
           text-transform: uppercase;
           color: #ffffff; }
-        main .registration form input[type="text"]::-ms-input-placeholder {
+        main .registration #main-form input[type="text"]::-ms-input-placeholder {
           text-align: center;
           text-transform: uppercase;
           color: #ffffff; }
-        main .registration form input[type="text"]::placeholder {
+        main .registration #main-form input[type="text"]::placeholder {
           text-align: center;
           text-transform: uppercase;
           color: #ffffff; }
-      main .registration form input[type="button"] {
+      main .registration #main-form input[type="button"] {
         text-transform: uppercase;
         border: 2px solid #f0e353;
         color: #f0e353;
         background-color: rgba(77, 77, 77, 0.2); }
-        main .registration form input[type="button"]:hover {
+        main .registration #main-form input[type="button"]:hover {
           -webkit-transform: scale(1.1);
                   transform: scale(1.1); }
 
@@ -315,5 +309,100 @@ main {
       font-size: 22px;
       font-weight: 100;
       border: none; }
+
+@media screen and (max-width: 1470px) {
+  body {
+    min-width: 960px; }
+
+  main {
+    max-width: 100%;
+    min-width: auto;
+    margin: 0 auto;
+    padding: 0; }
+    main .title .description {
+      margin: 30px auto;
+      text-align: center;
+      width: auto; }
+      main .title .description:nth-of-type(2) {
+        color: #f0e353;
+        width: auto; }
+    main .title p {
+      width: auto;
+      text-align: center; }
+    main .title .the_place_of_webinar {
+      margin: 98px 0 50px 0; }
+      main .title .the_place_of_webinar p {
+        display: block;
+        width: 936px;
+        height: 60px;
+        margin: 0 auto;
+        border-left: 7px solid #f0e353;
+        padding-left: 16px;
+        line-height: 60px; }
+    main .places-left {
+      position: relative;
+      top: 200px;
+      width: 365px;
+      height: 425px;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+
+  .teem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+    text-transform: uppercase;
+    height: auto;
+    width: 100%; }
+    .teem > div {
+      height: 150px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .teem > div p {
+        font-family: 'Roboto';
+        font-size: 25px;
+        color: #ffffff; }
+    .teem .teem--organizers {
+      width: 100%; }
+      .teem .teem--organizers .teem--logo {
+        width: 157.5px;
+        height: 40.5px;
+        margin-right: 49px; }
+      .teem .teem--organizers p {
+        width: auto; }
+    .teem .teem--hosts {
+      width: 100%;
+      border-left: none; }
+      .teem .teem--hosts .teem--logo {
+        width: 69px;
+        height: 69px;
+        margin-right: 39px; }
+      .teem .teem--hosts div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 40%; }
+        .teem .teem--hosts div p {
+          width: auto;
+          display: block;
+          border-bottom: 3px solid #ffffff; }
+        .teem .teem--hosts div .small-caps {
+          font-size: 17px; } }
 
 /*# sourceMappingURL=main.css.map */
